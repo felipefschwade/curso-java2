@@ -1,6 +1,6 @@
 package curso_java2;
 
-public class Conta {
+abstract class Conta {
 	protected double saldo;
 	
 	public void setSaldo(double saldo) {
@@ -15,7 +15,5 @@ public class Conta {
 	public void saca(double valor) {
 		this.saldo -= valor;
 	}
-	public void atualiza(double taxa) {
-		this.saldo += (this.saldo * taxa);
-	}
+	public abstract void atualiza(double taxa);
 }
