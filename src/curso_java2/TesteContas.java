@@ -11,8 +11,8 @@ public class TesteContas {
 		cc.atualiza(0.01);
 		cp.atualiza(0.01);
 
-		System.out.println(cc.getSaldo());
-		System.out.println(cp.getSaldo());
+		System.out.printf("O saldo é: %.2f", cc.getSaldo());
+		System.out.printf("O saldo é: %.2f", cp.getSaldo());
 
 	}
 }
