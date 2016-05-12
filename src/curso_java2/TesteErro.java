@@ -3,7 +3,11 @@ package curso_java2;
 public class TesteErro {
 	public static void main(String[] args) {
         System.out.println("inicio do main");
-        metodo1();
+        try {
+        	metodo1();
+        } catch (RuntimeException e) {
+			System.out.println("Valor maior que o tamanho do array");
+		}
         System.out.println("fim do main");
     }
 
@@ -17,13 +21,9 @@ public class TesteErro {
         System.out.println("inicio do metodo2");
         int[] array = new int[10];
         for (int i = 0; i <= 15; i++) {
-        	try {
         		array[i] = i;            
                 System.out.println(i);
-			} catch (RuntimeException e) {
-				System.out.println("Valor maior que o tamanho do array");
-			}
-        }
+        	}
         System.out.println("fim do metodo2");
     }
 }
