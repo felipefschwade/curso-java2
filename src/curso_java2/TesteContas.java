@@ -4,8 +4,11 @@ public class TesteContas {
 	public static void main(String[] args) throws Exception {
 		ContaCorrente cc = new ContaCorrente();
 		ContaPoupanca cp = new ContaPoupanca();
-
-		cc.deposita(-1000);
+		try {
+			cc.deposita(-1000);
+		} catch (Exception e) {
+			System.out.println("Não é possível depostiar um valor negativo");
+		}
 		cp.deposita(1000);
 
 		cc.atualiza(0.01);
