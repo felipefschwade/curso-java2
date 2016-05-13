@@ -5,9 +5,9 @@ public class TesteContas {
 		ContaCorrente cc = new ContaCorrente();
 		ContaPoupanca cp = new ContaPoupanca();
 		try {
-			cc.deposita(-1000);
+			cp.deposita(-1000);
 		} catch (Exception e) {
-			System.out.println("Não é possível depostiar um valor negativo");
+			System.out.println(e.getLocalizedMessage());
 		}
 		cp.deposita(1000);
 
