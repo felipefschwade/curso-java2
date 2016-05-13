@@ -7,7 +7,7 @@ public class TesteContas {
 		try {
 			cp.deposita(-1000);
 		} catch (Exception e) {
-			System.out.println(e.getLocalizedMessage());
+			System.out.println("Valor negativo inválido inserido");
 		}
 		cp.deposita(1000);
 
